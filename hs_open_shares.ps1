@@ -260,7 +260,7 @@ Do {
     $loghdr = "hostname,host_share,status"
     Out-File -filepath "C:\users\username\desktop\shares.csv" -inputobject $loghdr -append
 
-    $hosts = Get-NetworkRange 164.72.0.1 16
+    $hosts = Get-NetworkRange 10.0.0.1 16
     $i = 0
     foreach ($h in $hosts) {
       while ((get-job -state running).count -ge $maxthreads){
